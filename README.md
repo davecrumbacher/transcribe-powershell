@@ -24,7 +24,7 @@ More information on AWS Tools for Windows PowerShell is [here](https://docs.aws.
 ## Transcribe Commands
 
 ### Submitting Jobs
-The `TranscribeFromS3.ps1` script submits Transcribe jobs for media files in S3. You simply provide the S3 bucket information and it will submit a transcription job for every object in the specified bucket/prefix.
+The [TranscribeFromS3.ps1](TranscribeFromS3.ps1) script submits Transcribe jobs for media files in S3. You simply provide the S3 bucket information and it will submit a transcription job for every object in the specified bucket/prefix.
 
 ```
 C:\PS> .\TranscribeFromS3.ps1 -InputBucket my-audio-bucket -InputKeyPrefix subdir -AudioFormat mp3
@@ -73,7 +73,7 @@ For more options, see the help documentation by issuing this command:
 `Get-Help .\TranscribeFromS3.ps1`
 
 ### Listing Jobs
-The `ListTranscribeJobs.ps1` script lists the Transcribe jobs and provides details for each job. When using the `-IncludeDetails` parameter, it provides extra information on each job, including media format, sample rate, and output URL. Note that this option requires an extra API call for each job that is listed.
+The [ListTranscribeJobs.ps1](ListTranscribeJobs.ps1) script lists the Transcribe jobs and provides details for each job. When using the `-IncludeDetails` parameter, it provides extra information on each job, including media format, sample rate, and output URL. Note that this option requires an extra API call for each job that is listed.
 
 ```
 C:\PS> .\ListTranscribeJobs.ps1 -JobNameContain sample -Status COMPLETED -IncludeDetails
@@ -116,7 +116,7 @@ For more options, see the help documentation by issuing this command:
 `Get-Help .\ListTranscribeJobs.ps1`
 
 ### Deleting Jobs
-The `DeleteTranscribeJobs.ps1` script deletes multiple Transcribe jobs. A filter is available to match the job name. Jobs currently in progress cannot be deleted.
+The [DeleteTranscribeJobs.ps1](DeleteTranscribeJobs.ps1) script deletes multiple Transcribe jobs. A filter is available to match the job name. Jobs currently in progress cannot be deleted.
 
 ```
 C:\PS> .\DeleteTranscribeJobs.ps1 -JobNameContain sample
