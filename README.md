@@ -1,5 +1,5 @@
 # transcribe-powershell
-This repo contains PowerShell scripts for interacting with the [Amazon Transcribe](https://aws.amazon.com/transcribe/) service. The [Transcribe console](https://us-east-1.console.aws.amazon.com/transcribe/home) is very useful, but it only allows you to work with one transcription job at a time. The scripts in this repo provide an automated way of submitting multiple transcription requests, listing jobs, and deleting jobs, all within PowerShell.
+This repo contains PowerShell scripts for interacting with the [Amazon Transcribe](https://aws.amazon.com/transcribe/) service. The [Transcribe console](https://us-east-1.console.aws.amazon.com/transcribe/home) is very useful, but it only allows you to work with one transcription job at a time. The scripts in this repo provide an automated way of submitting multiple transcription requests, listing jobs, and deleting jobs -- all within PowerShell.
 
 ## Setup
 Before you begin, you will need to setup your AWS credentials and your Windows environment to use those credentials. You only need to do this once.
@@ -116,7 +116,7 @@ For more options, see the help documentation by issuing this command:
 `Get-Help .\ListTranscribeJobs.ps1`
 
 ### Deleting Jobs
-The `DeleteTranscribeJobs.ps1` script deletes multiple Transcribe jobs. A filters is available to match the job name. Jobs currently in progress cannot be deleted.
+The `DeleteTranscribeJobs.ps1` script deletes multiple Transcribe jobs. A filter is available to match the job name. Jobs currently in progress cannot be deleted.
 
 ```
 C:\PS> .\DeleteTranscribeJobs.ps1 -JobNameContain sample
